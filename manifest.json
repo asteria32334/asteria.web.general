@@ -1,7 +1,8 @@
 {
   "name": "Asteria Robotics",
   "short_name": "Asteria",
-  "start_url": "/",
+  "start_url": "/asteria.web.general/",
+  "scope": "/asteria.web.general/"
   "display": "standalone",
   "background_color": "#0b0f1a",
   "theme_color": "#00d4ff",
