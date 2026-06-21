@@ -107,15 +107,21 @@ body {
 
 /* ====================== SECTIONS ====================== */
 .section {
-    padding: 40px 50px;
+    padding: 80px 50px;
 }
 
 .section h2 {
     color: #00d4ff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
     font-size: 2.2rem;
 }
+
+#sponsorluk {
+    margin-top: 10px;
+}
+
+
 
 /* ====================== CARD CONTAINER ====================== */
 .card-container {
@@ -348,4 +354,47 @@ body {
     padding: 20px;
     border-top: 1px solid rgba(255,255,255,0.15);
     font-size: 0.9rem;
+}
+
+
+
+
+/* ====================== SECTION BOŞLUK DÜZELTME (AGRESİF) ====================== */
+
+.section {
+    padding: 45px 50px 35px !important;   /* Üst 45px, alt 35px */
+}
+
+.section + .section {
+    margin-top: -30px !important;         /* Section’lar arası boşluğu kuvvetle azalt */
+    padding-top: 30px !important;
+}
+
+/* Hero ile ilk section arası */
+.hero + .section {
+    margin-top: -60px !important;
+    padding-top: 80px !important;
+}
+
+/* Başlıkların alt boşluğunu azalt */
+.section h2 {
+    margin-bottom: 25px !important;
+}
+
+/* Card container, sponsor, gallery gibi içerikler */
+.card-container,
+.sponsor-slider,
+.gallery {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Genel margin temizleme */
+h1, h2, h3, h4, p {
+    margin-bottom: 0.8em;
+}
+
+
+#portfolyo {
+    margin-top: 60px;
 }
