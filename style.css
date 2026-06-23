@@ -64,6 +64,7 @@ body {
     align-items: center;
     text-align: center;
     background: radial-gradient(circle, #101828, #05070d);
+    margin-top: 25px;
 }
 
 .hero-content h1 {
