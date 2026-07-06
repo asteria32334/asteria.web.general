@@ -350,3 +350,42 @@ body {
     border-top: 1px solid rgba(255,255,255,0.15);
     font-size: 0.9rem;
 }
+
+
+.language-switch{
+    position:fixed;
+    top:18px;
+    right:20px;
+
+    display:flex;
+    gap:8px;
+
+    background:rgba(15,20,35,.85);
+    backdrop-filter:blur(10px);
+
+    padding:8px 10px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    z-index:9999;
+}
+
+.language-switch button{
+
+    background:none;
+    border:none;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.language-switch button:hover{
+
+    transform:scale(1.2);
+
+}
