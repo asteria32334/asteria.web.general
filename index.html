@@ -634,15 +634,7 @@ window.onload=function(){
 
 setLanguage(localStorage.getItem("language") || "tr");
 
-document.querySelectorAll(".language-switch button").forEach(btn=>{
-    btn.style.opacity="0.5";
-});
 
-if(lang==="tr"){
-    document.querySelector(".language-switch button:first-child").style.opacity="1";
-}else{
-    document.querySelector(".language-switch button:last-child").style.opacity="1";
-}
 }
 
 </script>
