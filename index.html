@@ -16,31 +16,22 @@
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
 
     <div class="logo">ASTERIA ROBOTICS | #32334</div>
 
     <ul class="nav-links">
 
-        <!-- Aynı sayfa bölümleri -->
-        <li><a href="#home">Ana Sayfa</a></li>
-        <li><a href="#team">Takımımız</a></li>
-        <li><a href="#robots">Robotlarımız</a></li>
-        <li><a href="#projects">Projelerimiz</a></li>
-        <li><a href="#sponsors">Sponsorlarımız</a></li>
-        <li><a href="#gallery">Galeri</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#home" id="navHome">Ana Sayfa</a></li>
+        <li><a href="#team" id="navTeam">Takımımız</a></li>
+        <li><a href="#robots" id="navRobots">Robotlarımız</a></li>
+        <li><a href="#projects" id="navProjects">Projelerimiz</a></li>
+        <li><a href="#sponsors" id="navSponsors">Sponsorlarımız</a></li>
+        <li><a href="#gallery" id="navGallery">Galeri</a></li>
+        <li><a href="#contact" id="navContact">İletişim</a></li>
 
-        <li><a href="decode_belgeler.html">DECODE Belgeleri</a></li>
-        <li><a href="giris.html">Login</a></li>        
-
-        <!-- Ayrı HTML sayfaları (şimdilik boş) 
-        <li><a href="awards.html">Awards</a></li>
-        <li><a href="outreach.html">Outreach</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="join.html">Join Us</a></li> -->
+        <li><a href="decode_belgeler.html" id="navDecode">DECODE Belgeleri</a></li>
+        <li><a href="giris.html" id="navLogin">Login</a></li>
 
     </ul>
 
@@ -66,7 +57,7 @@
 
         <p>Engineering Tomorrow</p>
 
-        <a href="#team" class="btn">Keşfet</a>
+        <a href="#team" class="btn" id="discoverBtn">Keşfet</a>
 
     </div>
 
@@ -388,6 +379,76 @@ Asteria Robotics olarak hedefimiz, her sezon daha ileriye gitmek, daha iyi çöz
 </footer>
 
 </section>
+
+<script>
+
+const translations = {
+
+tr:{
+
+navHome:"Ana Sayfa",
+navTeam:"Takımımız",
+navRobots:"Robotlarımız",
+navProjects:"Projelerimiz",
+navSponsors:"Sponsorlarımız",
+navGallery:"Galeri",
+navContact:"İletişim",
+navDecode:"DECODE Belgeleri",
+navLogin:"Login",
+
+heroText:"Engineering Tomorrow",
+
+discoverBtn:"Keşfet"
+
+},
+
+en:{
+
+navHome:"Home",
+navTeam:"Our Team",
+navRobots:"Our Robots",
+navProjects:"Projects",
+navSponsors:"Sponsors",
+navGallery:"Gallery",
+navContact:"Contact",
+navDecode:"DECODE Documents",
+navLogin:"Login",
+
+heroText:"Engineering Tomorrow",
+
+discoverBtn:"Discover"
+
+}
+
+};
+
+function setLanguage(lang){
+
+document.documentElement.lang=lang;
+
+for(let id in translations[lang]){
+
+const element=document.getElementById(id);
+
+if(element){
+
+element.innerHTML=translations[lang][id];
+
+}
+
+}
+
+localStorage.setItem("language",lang);
+
+}
+
+window.onload=function(){
+
+setLanguage(localStorage.getItem("language") || "tr");
+
+}
+
+</script>
 
 </body>
 </html>
